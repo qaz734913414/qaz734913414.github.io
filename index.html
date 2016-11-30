@@ -1,76 +1,107 @@
----
-layout: post-index
-title: Latest Posts
-description: "Describe this nonsense."
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-comments: false
-image:
-  feature: abstract-1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
----
 
-{% for post in paginator.posts %}
-<article class="hentry">
-  <header>
-    {% if post.image.feature %}
-      <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-      </div><!-- /.entry-image -->
-    {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
-        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
-    {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
-    {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
-    {% endif %}
-  </header>
-  <div class="entry-content">
-    {{ post.content }}
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-{% endfor %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>错别字-错别字大全-错别字在线检测-错别字网</title>
+<meta name="Description" content="繁体字网首创的在线错别字检测软件，为你提供免费的错别字在线检测服务，智能检测出语句中常用错别字，涵盖目前最大的错别字数据库（并在不断完善中），希望对您正确的文字书写带来帮助。">
+<style>
+*{margin:0;padding:0}
+.igm{margin-top:0px;float:left;}
+hr{ margin:5px 0 ; border-top: 1px solid #CCCCCC }
+#cuolist li{float:left;width:134px;margin:3px}
+</style>
+<script src="cuobiezi.js" type="text/javascript"  charset="utf-8" ></script>
+</head>
+<body>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <a href="{{ site.url }}" class="btn">Previous</a>
-    {% else %}
-      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
-    {% endif %}
-  {% else %}
-    Previous
-  {% endif %}
-  <ul class="inline-list">
-    <li>
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
-        <a href="{{ site.url }}">1</a>
-      {% endif %}
-    </li>
-    {% for count in (2..paginator.total_pages) %}
-      <li>
-        {% if count == paginator.page %}
-          <span class="current-page">{{ count }}</span>
-        {% else %}
-          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.next_page %}
-    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
-  {% else %}
-    Next
-  {% endif %}
-</div><!-- /.pagination -->
+
+<div id="main">
+	 <div class="mainbody" >
+	       <div class="title" style="text-align:center; font-size:18px"><strong>错别字</strong></a></div>
+               <div style="text-align:center; padding:9px;" style="">
+ 
+      <p style=" padding:5px;">输入您要检查错别字的文字内容，点下面的“检测错别字”按钮立马进行智能检测，赶紧试试把！</p>
+      <p><TEXTAREA ID="mingzi" rows=20 cols=70 style="width:670px;height:70px;font-size:12px;line-height:20px;padding:10px;  text-align:left" value="">小明考试学习刻苦，成绩出类拔粹，高考作文满分也是传颂一时，那时候去他家拜访的人都穿流不息，可毕业后他竟然当了村官，大家都觉得他大才小用，认为他放弃城市高薪到农村是得不尝失，没想到小明很快就在村里独挡一面，在村里搞养殖独劈蹊径带大家走上致富路子，不断给村里带来吉详。</TEXTAREA></p>
+      <P style="MARGIN: 0px 0 10px 0; overflow:hidden;"><input type="button" value="一键检测错别字"  class="indexinput" onclick="aa()">
+        <input type="hidden" value="0" name="h1" /></P>
+      </div>
+<div style="padding:0 0 10px 150px;">
+
+<div style="clear:both"></div>
+</div>	  
+<div id="div1" style="width:700px;font-size:14PX; text-align:left; margin:0 auto 15px auto; color: #464646;display:n1one" > 
+【错别字批改模式】：
+</div>
+<div id="div2" style="width:680px; border:1px solid #F90;PADDING:10PX;font-size:12PX;line-height:25px;text-align:left; margin:0 auto 15px auto; color: #000;display:n1one" > 
+ 繁体字网正在自动检测错别字，请稍等。。。。
+</div>
+
+<div id="div1" style="width:700px;font-size:14PX; text-align:left; margin:0 auto 15px auto; color: #464646;display:n1one" > 
+【错别字检测结果】：
+<br><br>
+<DIV id="err1" style='color:blue;border:1px solid #CCC;PADDING:10PX;font-SIZE:12px;line-height:20px;'></DIV>
+</div>
+
+
+<hr>
+<div id="div3" style="width:735px;height:396px;text-align:center; margin:0;color:#777; background-repeat: no-repeat;display:none" ></div>
+<div style="clear:both"></div>
+</div>
+</div><script type="text/javascript">
+function goit(){
+	if(document.getElementById("cuolist").style.display=="none"){
+		document.getElementById("cuolist").style.display=""
+		document.getElementById("chaid").value="点击隐藏所有错别字例子"
+	}else{
+		document.getElementById("cuolist").style.display="none"
+		document.getElementById("chaid").value="点击查看所有错别字例子"
+	}
+	
+	
+}
+</script>
+<div class="main">
+	 <div class="mainbody" > 
+	       <div class="title">常见错别字用法列表（括号内为正确写法）→<input type="button" value="点击查看所有错别字例子" onclick="goit()" id="chaid"/> </div> 
+           <div class="tony" style="font-size:12px;display:none" ID="cuolist"> 
+  
+		   </div> <div style="clear:both"></div>	
+	 </div>
+<br>
+<SCRIPT LANGUAGE="JavaScript">
+var yes =0;
+function aa(){
+	if(yes ==0){
+		yes=1;
+		var yeshtml = "";
+		for(var i=0; i< dui.length;i++){
+			yeshtml = yeshtml + "<li>" + dui[i] + "</li>";
+		}
+		document.getElementById("cuolist").innerHTML = yeshtml
+	}
+	var num1 = 0; 
+	var ci = document.getElementById("mingzi").value;
+	var ci2 = ci.length;
+	var cc ="";
+	var cc2 ="";
+
+	for(var i=0; i< cuo.length;i++){
+		if(ci.indexOf(cuo[i])>-1){
+			num1++;
+			cc = cc + num1 +"、" + cuo[i] + " "
+			cc2 = cc2 + num1 +"、" + dui[i] + " "
+		}
+		ci = ci.replace(cuo[i],"<span style='color:red'>"+dui[i]+"</span>")
+
+	}
+
+	//alert(ci)
+	document.getElementById("div2").innerHTML = ci
+	document.getElementById("err1").innerHTML = "<span style='color: #2f2f2f'>A、错别字检测结果：</span>共检测出来 " + num1 + " 处错别字；文本正确率(错别字数除总字数)为："+  (100-num1/ci2*100)  +"% 。<BR><span style='color: #2f2f2f'>B、错别字词语展示：</span><span style='color: #ff6600'>" +cc + "</span><BR><span style='color: #2f2f2f'>C、错别字用法纠正：</span><span style='color: #009933'>" +cc2+ "</span>"
+ 
+}
+window.onload=aa
+</SCRIPT>
+
+</body></html>
